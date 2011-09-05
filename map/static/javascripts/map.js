@@ -34,45 +34,9 @@ $(document).ready(function() {
         mapTypeId: "simple"
     };
 
-    backdrop_styles = [
-        {
-            featureType: "administrative",
-            elementType: "labels",
-            stylers: [
-                { lightness: 10 }
-            ]
-        },{
-            featureType: "poi",
-            elementType: "labels",
-            stylers: [
-                { visibility: "off" }
-            ]
-        },{
-            featureType: "poi.park",
-            elementType: "geometry",
-            stylers: [
-                { visibility: "off" }
-            ]
-        },{
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [
-                { visibility: "simplified" },
-                { saturation: -100 },
-                { lightness: 0 }
-            ]
-        },{
-            featureType: "road.arterial",
-            elementType: "labels",
-            stylers: [
-                { gamma: 10 }
-            ]
-        }
-    ];
+
 
     var initial_hash = window.location.hash;
-
-    simple = new google.maps.StyledMapType(backdrop_styles, { name: "Illinois population 2010" });
     map = new google.maps.Map(document.getElementById("map"), map_options);
     var geocoder = new google.maps.Geocoder();
     var MIN_LON = '29.5732';
